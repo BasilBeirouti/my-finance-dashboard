@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Function to fetch and render the chart
     function fetchAndRenderChart(merchantFilterValue = "", startDate = null) {
-        fetch("/data")
+        fetch("transactions.json")
             .then(response => response.json())
             .then(data => {
                 if (startDate) {
@@ -57,6 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
 
                 renderChart(highchartsData, highchartsDrilldown);
+                updateTable(inScopeTransactions);
             });
     }
 
@@ -91,6 +92,16 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
+
+    Highcharts.addEvent(Highcharts.Series, 'click', function (event) {
+        if (event.point.options && event.point.options.id) {
+            const category = event.point.options.id;
+            const transactionsOfCategory = inScopeTransactions.filter(transaction => transaction["category-level1"] === category);
+            updateTable(transactionsOfCategory);
+        } else {
+            updateTable(inScopeTransactions);
+        }
+    });
 
     // Function to update the transactions table based on the selected category
     function updateTable(transactions) {
