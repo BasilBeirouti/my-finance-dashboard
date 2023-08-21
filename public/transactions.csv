@@ -1,0 +1,31 @@
+id,date,account,merchant,category-level1,category-level2,category-level3,amount
+1,2023-01-01,AC12345,Amazon,Online Shopping,Electronics,Phones,250.00
+2,2023-01-02,AC12345,Starbucks,Food & Beverages,Cafe,Coffee,5.00
+3,2023-01-03,AC12345,Walmart,Physical Retail,Groceries,Vegetables,20.00
+4,2023-01-04,AC12345,Apple Store,Online Shopping,Electronics,Computers,1200.00
+5,2023-01-05,AC12345,McDonald's,Food & Beverages,Restaurant,Fast Food,10.00
+96,2023-04-06,AC12345,Nike Store,Physical Retail,Clothing,Shoes,75.00
+97,2023-04-07,AC12345,Netflix,Online Subscription,Entertainment,Streaming,15.00
+98,2023-04-08,AC12345,Home Depot,Physical Retail,Home Improvement,Tools,50.00
+99,2023-04-09,AC12345,Shell,Gas & Fuel,Vehicle,Fuel,30.00
+100,2023-04-10,AC12345,Spotify,Online Subscription,Entertainment,Music,10.00
+101,2023-04-11,AC12345,Pizza Hut,Food & Beverages,Restaurant,Pizza,15.00
+102,2023-04-12,AC12345,Best Buy,Online Shopping,Electronics,TVs,400.00
+103,2023-04-13,AC12345,Adidas Store,Physical Retail,Clothing,Shoes,90.00
+104,2023-04-14,AC12345,Steam,Online Shopping,Entertainment,Video Games,20.00
+105,2023-04-15,AC12345,Local Bookstore,Physical Retail,Books,Literature,12.00
+106,2023-04-16,AC12345,Taco Bell,Food & Beverages,Restaurant,Fast Food,8.00
+107,2023-04-17,AC12345,Local Pharmacy,Physical Retail,Healthcare,Medicine,25.00
+108,2023-04-18,AC12345,HBO Max,Online Subscription,Entertainment,Streaming,12.00
+109,2023-04-19,AC12345,Chevron,Gas & Fuel,Vehicle,Fuel,32.00
+110,2023-04-20,AC12345,Disney+,Online Subscription,Entertainment,Streaming,7.00
+111,2023-04-21,AC12345,Local Gym,Sports & Fitness,Subscription,Gym Membership,50.00
+112,2023-04-22,AC12345,Burger King,Food & Beverages,Restaurant,Fast Food,10.00
+113,2023-04-23,AC12345,PlayStation Store,Online Shopping,Entertainment,Video Games,60.00
+114,2023-04-24,AC12345,Lowe's,Physical Retail,Home Improvement,Tools,45.00
+115,2023-04-25,AC12345,Local Cinema,Entertainment,Movies,Tickets,20.00
+116,2023-04-26,AC12345,Gap,Physical Retail,Clothing,Apparel,60.00
+117,2023-04-27,AC12345,Local Bakery,Food & Beverages,Shop,Bread,5.00
+118,2023-04-28,AC12345,YouTube Premium,Online Subscription,Entertainment,Streaming,10.00
+119,2023-04-29,AC12345,Target,Physical Retail,Groceries,Household,100.00
+120,2023-04-30,AC12345,Zara,Physical Retail,Clothing,Apparel,70.00
