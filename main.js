@@ -75,12 +75,21 @@ document.addEventListener('DOMContentLoaded', function () {
                     dataLabels: {
                         enabled: true,
                         format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+                    },
+                    point: {
+                        events: {
+                            click: function() {
+                                const clickedCategory = this.name;
+                                const filteredTransactions = inScopeTransactions.filter(trx => trx["category-level1"] === clickedCategory);
+                                updateTable(filteredTransactions);
+                            }
+                        }
                     }
                 }
             },
             tooltip: {
                 headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
-                pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}</b><br/>'
+                pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>${point.y:.2f}</b><br/>' // Added dollar sign for tooltip formatting
             },
             series: [{
                 name: 'Categories',
@@ -92,16 +101,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
-
-    Highcharts.addEvent(Highcharts.Series, 'click', function (event) {
-        if (event.point.options && event.point.options.id) {
-            const category = event.point.options.id;
-            const transactionsOfCategory = inScopeTransactions.filter(transaction => transaction["category-level1"] === category);
-            updateTable(transactionsOfCategory);
-        } else {
-            updateTable(inScopeTransactions);
-        }
-    });
 
     // Function to update the transactions table based on the selected category
     function updateTable(transactions) {
